@@ -1,0 +1,7 @@
+bin
+npm-debug.log
+*.orig
+node_modules
+*.sublime-workspace
+package
+report

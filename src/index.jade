@@ -1,0 +1,36 @@
+#main
+  .panel.panel-default
+    .panel-heading
+        span.btn-group
+          button.btn.btn-primary(data-toggle="dropdown", onclick="if(document.execCommand('increaseFontSize', false, null) == false) {addHTML('big')}")
+            strong A
+            i.glyphicon.glyphicon-arrow-up
+          button.btn.btn-primary(data-toggle="dropdown", onclick="if(document.execCommand('decreaseFontSize', false, null) == false) {addHTML('small')}")
+            strong A
+            i.glyphicon.glyphicon-arrow-down
+        span.btn-group
+          button.btn.btn-primary(onClick="document.execCommand('bold', false, null)", title="Bold (CTRL+B)")
+            strong B
+          button.btn.btn-primary(onClick="document.execCommand('italic', false, null)", title="Italic (CTRL+I)")
+            em I
+          button.btn.btn-primary(onClick="document.execCommand('underline', false, null)", title="Underline (CTRL+I)", class="btn btn-primary")
+            u U
+          button.btn.btn-primary(class="btn btn-primary", onclick="image()")
+            img(src="http://www.iconsdb.com/icons/preview/white/picture-xxl.png", alt="", width="15", height="15")
+          a.btn.btn-right.btn-danger(onClick="document.getElementById('editor').innerHTML='<br>'")
+            strong &times;
+    .panel-body(contenteditable="true", id="editor", placeholder="hello", onkeyup="$('#res').text($('#editor').html())", onchange="$('#res').text($('#editor').html())")
+
+  h4 EDITOR HTML:
+  #res
+
+
+script(src="js/script.js")
+<!-- Latest compiled and minified CSS -->
+link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css")
+
+script(src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.8.0/jquery.min.js")
+<!-- Optional theme -->
+link(rel="stylesheet", href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css")
+<!-- Latest compiled and minified JavaScript -->
+script(src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js")
