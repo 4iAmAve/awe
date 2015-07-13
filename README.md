@@ -1,6 +1,6 @@
-##WE##
+##AWE##
 
-WE is a WYSIWYG Editor
+AWE is an Awesome WYSIWYG Editor
 
 -----------
 
